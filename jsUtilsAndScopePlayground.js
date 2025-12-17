@@ -76,12 +76,12 @@ function func1(a) {
     console.log(`${constVar1} in function if block`);
   }
   console.log(`${globalVar1} in function block`);
-  // console.log(`${letVar1} in function block`); //Reference Error
-  // console.log(`${constVar1} in function block`); //Reference Error
+  // console.log(`${letVar1} in function block`); //Reference Error because it has only access in if block
+  // console.log(`${constVar1} in function block`); //Reference Error because it has only access in if block
 }
 
 func1(2);
-// console.log(`${varVar1} outside the function`);//Reference Error
+// console.log(`${varVar1} outside the function`);//Reference Error because it has only access in func1 and its blocks
 
 //Nested function
 console.log('=========function with Nested function block===========');
@@ -99,8 +99,8 @@ function func2() {
   }
   nestedFunction();
   console.log(`${globalVar2} in function block`);
-  //console.log(`${letVar2} in function block`); //Reference Error
-  //console.log(`${constVar2} in function block`); //Reference Error
+  //console.log(`${letVar2} in function block`);//Reference Error because it has only access in nested function block
+  // console.log(`${constVar2} in function block`);//Reference Error because it has only access in nested function block
 }
 
 func2();
