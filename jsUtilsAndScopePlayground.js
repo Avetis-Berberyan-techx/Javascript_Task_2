@@ -130,7 +130,7 @@ function func3() {
 }
 //Arrow functions
 
-// varFunc(); //type Error
+// varFunc(); //type Error because it initializes as undefined
 console.log(varFunc);
 
 // letFunc(); //Reference Error
